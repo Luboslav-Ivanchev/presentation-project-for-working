@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./public/favicon.png">
+
+    <title>Shoe Shelf</title>
+    <link rel="stylesheet" href="public/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="javascripts files/routing.js" defer></script>
+    <script src="javascripts files/registration.js" defer></script>
+    <script src="javascripts files/login.js" defer></script>
+    <script src="javascripts files/manipulating.js" defer></script>
+
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/CreateNewOffer">Create new offer</a>
+                </li> 
+                <li class="site-logo">Shoe</li>
+                <li>
+                    <a href="/Site">
+                         <img src="public/sneakers.png" alt="">
+
+                    </a>
+                </li> 
+                <li class="site-logo">Shelf</li>
+                <li>Welcome, xxx@xx.xxx |
+                    <a href="/Logout">Logout</a>
+                </li>
+                <li>
+                    <a href="/Login">Login</a>
+                </li>
+                <li>
+                    <a href="/Register">Register</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="root">
+
+    </div>
+
+    <div id="footer"  style=" border: 5px darkorange;
+    background-color: #234465;
+    text-align: center;
+   color:whitesmoke;
+     font-size: 25px;"
+    >
+
+    </div>
+
+    <!--
+    <main>
+        <div class="container">
+            <div class="about-us">
+                <div>
+                    <img src="public/shoes.jpg" alt="" height="500px" width="500px">
+                    <img src="public/shoes2.jpg" alt="" width="500px" height="500px">
+                </div>
+                <p>
+                    <a href="">Register Now</a> and Try it!
+                </p>
+            </div>
+        </div>
+
+        <div class="shoes">
+            <div class="shoe">
+                <img src="https://i1.t4s.cz/products/ar4149-001/nike-air-zoom-pegasus-36-gs-251390-ar4149-001.jpeg" alt="">
+                <h3>Nike Pegasus</h3>
+                <a>Buy it for $72,90</a>
+            </div>
+            <div class="shoe">
+                <img src="https://www.shooos.bg/media/catalog/product/cache/20/image/9df78eab33525d08d6e5fb8d27136e95/a/d/adidas-falcon-cg6211.jpg" alt="">
+                <h3>Adidas Falcon</h3>
+                <a>Buy it for $132,00</a>
+            </div>
+            <div class="shoe">
+                <img src="https://i1.t4s.cz/products/3023295-602/under-armour-ua-w-hovr-phantom-se-trek-263676-3023295-603.jpg" alt="">
+                <h3>Under Armour HOV</h3>
+                <a href="">Buy it for $149,99</a>
+            </div>
+            <div class="shoe">
+                <img src="https://photo2.i-run.fr/reebok-nano-9-m-chaussures-homme-337585-1-z.jpg" alt="">
+                <h3>Reebok Nano-9</h3>
+                <a>Buy it for $92,29</a>
+            </div>
+            <div class="shoe">
+                <img src="https://www.obuvki.bg/media/catalog/product/cache/image/650x650/0/1/01_0000300592205_ph.jpg" alt="">
+                <h3>Asics Gel-Quantum</h3>
+                <a>Buy it for $140,00</a>
+            </div>
+        </div>
+
+        <h1>Create New Offer</h1>
+        <p class="message"></p>
+        <form>
+            <div>
+                <input type="text" placeholder="Name...">
+            </div>
+            <div>
+                <input type="text" placeholder="Price...">
+            </div>
+            <div>
+                <input type="text" placeholder="Image url...">
+            </div>
+            <div>
+                <textarea placeholder="Give us some description about this offer..."></textarea>
+            </div>
+            <div>
+                <input type="text" placeholder="Brand...">
+            </div>
+            <div>
+                <button>Create</button>
+            </div>
+        </form>
+
+        <div class="offer-details">
+            <h1>Under Armour HOVR</h1>
+            <div class="info">
+                <img src="https://i1.t4s.cz/products/3023295-602/under-armour-ua-w-hovr-phantom-se-trek-263676-3023295-603.jpg" alt="">
+                <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis explicabo
+                    voluptatibus odio? Deleniti amet qui tenetur ipsa enim blanditiis laboriosam distinctio, dignissimos
+                    cupiditate, delectus autem. Explicabo exercitationem voluptatibus reprehenderit repellat. Lorem
+                    ipsum dolor, sit amet consectetur adipisicing elit. Tempore reiciendis maiores aliquid nobis,
+                    accusantium dolore iste ipsa atque deserunt corrupti maxime, alias neque libero temporibus expedita
+                    magni perferendis aut nostrum.
+                    <br>
+                    <br>
+                    <p class="price">$149.99</p>
+                </div>
+            </div>
+            <div class="actions">
+                <a>Edit</a>
+                <a>Delete</a>
+                <a>Buy</a>
+                <span>You bought it</span>
+            </div>
+        </div>
+
+        <h1>Edit Offer</h1>
+        <p class="message"></p>
+        <form>
+            <div>
+                <input type="text" placeholder="Name...">
+            </div>
+            <div>
+                <input type="text" placeholder="Price...">
+            </div>
+            <div>
+                <input type="text" placeholder="Image url...">
+            </div>
+            <div>
+                <textarea placeholder="Give us some description about this offer..."></textarea>
+            </div>
+            <div>
+                <input type="text" placeholder="Brand...">
+            </div>
+            <div>
+                <button>Edit</button>
+            </div>
+        </form>
+
+        <h1>Login</h1>
+        <p class="form-info">Don't have account?
+            <a href="../user/register.html">Register now</a> and fix that!
+        </p>
+        <form action="">
+            <div>
+                <input type="email" placeholder="Email...">
+            </div>
+
+            <div>
+                <input type="password" placeholder="Password...">
+            </div>
+            <div> 
+                <button>Login</button>
+            </div>
+        </form>
+
+        <h1>Register</h1>
+        <p class="form-info">Already registered?
+            <a href="">Login now</a> and have some fun!
+        </p>
+
+        <form action="">
+            <div>
+                <input type="email" placeholder="Email...">
+            </div>
+            <div>
+                <input type="password" placeholder="Password">
+            </div>
+            <div>
+                <input type="password" placeholder="Re-password">
+            </div>
+            <div>
+                <p class="message"></p>
+                <button>Register</button>
+            </div>
+        </form>
+
+    </main>
+
+    -->
+
+    <footer>
+        <p><a href="https://softuni.bg">Software University</a> - JS Applications @ 2020</p>
+    </footer>
+
+
+<script type="text/x-handlebars-template" id="Login">
+
+    <h1>Login</h1>
+
+    <p class="form-info">Don't have account?
+
+        <a href="../user/register.html">Register now</a> and fix that!
+    </p>
+    <form action="" id="login">
+        <div>
+            <input type="email" placeholder="Email...">
+        </div>
+
+        <div>
+            <input type="password" placeholder="Password...">
+        </div>
+        <div>
+            <button onclick="loginFunc(event)">Login</button>
+        </div>
+    </form>
+</script>
+
+ <script type="text/x-handlebars-template" id="Register">
+
+     <h1>Register</h1>
+     <p class="form-info">Already registered?
+         <a href="">Login now</a> and have some fun!
+     </p>
+
+     <form action="reg" id="registration">
+         <div>
+             <input type="email" placeholder="Email...">
+         </div>
+         <div>
+             <input type="password" placeholder="Password">
+         </div>
+         <div>
+             <input type="password" placeholder="Re-password">
+         </div>
+         <div>
+             <p class="message"></p>
+             <button onclick="registrationFunc(event)">Register</button>
+         </div>
+     </form>
+
+ </script>
+
+ <script type="text/x-handlebars-template" id="Logout">
+
+
+ </script>
+
+
+<script type="text/x-handlebars-template" id="CreateNewOffer">
+    <h1>Create New Offer</h1>
+    <p class="message"></p>
+    <form>
+        <div>
+            <input type="text" placeholder="Name...">
+        </div>
+        <div>
+            <input type="text" placeholder="Price...">
+        </div>
+        <div>
+            <input type="text" placeholder="Image url...">
+        </div>
+        <div>
+            <textarea placeholder="Give us some description about this offer..."></textarea>
+        </div>
+        <div>
+            <input type="text" placeholder="Brand...">
+        </div>
+        <div>
+            <button>Create</button>
+        </div>
+    </form>
+
+</script>
+
+    <script type="text/x-handlebars-template" id="Sneakers-Site">
+        <p style="color: orange;font-size: 30px"> <a href="https://sneakersandroll.com/?gclid=Cj0KCQjw6J-SBhCrARIsAH0yMZi2BVPounk6hu2MQgMM2d3drX1hQT4rbykRM9TQVgM4QBhDv64in8kaAvgrEALw_wcB">Sneakers-Site</a></p>
+    </script>
+
+ <script type="text/x-handlebars-template" id="LoggedIn">
+     <main>
+         <div class="container">
+             <div class="about-us">
+                 <div>
+                     <img src="public/shoes.jpg" alt="" height="500px" width="500px">
+                     <img src="public/shoes2.jpg" alt="" width="500px" height="500px">
+                 </div>
+                 <p>
+                     <a href="">Register Now</a> and Try it!
+                 </p>
+             </div>
+         </div>
+
+         <div id="shoes-id" class="shoes" >
+             <div class="shoe">
+                 <img src="" alt="">
+                 <h3></h3>
+                 <a></a>
+             </div>
+
+         </div>
+
+         <div></div>
+         <div></div>
+         <h1>Create New Offer</h1>
+         <p class="message"></p>
+         <form>
+             <div>
+                 <input type="text" placeholder="Name...">
+             </div>
+             <div>
+                 <input type="text" placeholder="Price...">
+             </div>
+             <div>
+                 <input type="text" placeholder="Image url...">
+             </div>
+             <div>
+                 <textarea placeholder="Give us some description about this offer..."></textarea>
+             </div>
+             <div>
+                 <input type="text" placeholder="Brand...">
+             </div>
+             <div>
+                 <button onclick="createFunction(event)">Create</button>
+             </div>
+         </form>
+
+         <div class="offer-details">
+             <h1></h1>
+             <div class="info">
+                 <img src="" alt="">
+                 <div class="description">
+                     <br>
+                     <br>
+                     <p class="price"></p>
+                 </div>
+             </div>
+             <div class="actions">
+                 <a style="display: none" onclick="editFunction(event)"></a>
+                 <a style="display: none" onclick="deleteFunction(event)"></a>
+                 <a style="display: none" onclick="buyIt(event)"></a>
+                 <span></span>
+             </div>
+         </div>
+
+         <h1>Edit Offer</h1>
+         <p class="message"></p>
+         <form>
+             <div>
+                 <input type="text" placeholder="Name...">
+             </div>
+             <div>
+                 <input type="text" placeholder="Price...">
+             </div>
+             <div>
+                 <input type="text" placeholder="Image url...">
+             </div>
+             <div>
+                 <textarea placeholder="Give us some description about this offer..."></textarea>
+             </div>
+             <div>
+                 <input type="text" placeholder="Brand...">
+             </div>
+             <div>
+                 <button>Edit</button>
+             </div>
+         </form>
+
+
+
+
+
+     </main>
+ </script>
+
+</body>
+
+</html>
